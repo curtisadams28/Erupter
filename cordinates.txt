@@ -1,0 +1,10 @@
+<?xml version= "1.0"?>
+<cordinates>
+	<place id="0" lat="-37.803226" long="175.194245"></place>
+	<place id="1" lat="30.013817" long="120.5235575"></place>
+	<place id="2" lat="50.313916" long="31.567197"></place>
+	<place id="3" lat="39.771659" long="-8.623222"></place>
+	<place id="4" lat="-16.526705" long="-47.684839"></place>
+	<place id="5" lat="19.939525" long="-98.99314"></place>
+	<place id="6" lat="15.633399" long="35.9637525"></place>
+</cordinates>
