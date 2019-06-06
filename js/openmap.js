@@ -38,8 +38,8 @@ function draw(){
 }
 
 function drawPoint(){
-clear();
+  clear();
 
-const nigeria = myMap.latLngToPixel(11.396396, 5.076543);
-ellipse(nigeria.x, nigeria.y, 20, 20);
+  const nigeria = myMap.latLngToPixel(11.396396, 5.076543);
+  ellipse(nigeria.x, nigeria.y, 20, 20);
 }
