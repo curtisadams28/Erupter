@@ -5,3 +5,13 @@ html, body {
 canvas {
   display: block;
 }
+
+.mapbox-improve-map {
+    display: none;
+}
+.mapboxgl-ctrl-attrib {
+  display: none;
+}
+.mapboxgl-control-container {
+  display: none;
+}

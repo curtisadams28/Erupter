@@ -1,18 +1,25 @@
 let data;
-let yearquery1 = 1995;
+let yearquery1 = 1999;
 let yearquery2 = 1999;
 let query = [];
+const key = 'pk.eyJ1IjoiY3VydHV4ZGVsdXhlIiwiYSI6ImNqd2s0MmZpZTBjajQ0OG9lZjQ1cWswbzIifQ.qqwt65rirh2anE7ykAn2hw'
 
 let myMap;
 let canvas;
-const mappa = new Mappa('Leaflet');
+const mappa = new Mappa('MapboxGL', key);
+
+
 
 const options = {
   lat: 0,
   lng: 0,
   zoom: 2,
-  style: "http://{s}.tile.osm.org/{z}/{x}/{y}.png"
+  studio: true, // false to use non studio styles
+  //style: 'mapbox.dark' //streets, outdoors, light, dark, satellite (for nonstudio)
+  style: 'mapbox://styles/mapbox/traffic-night-v2',
+  compact: true,
 }
+
 
 function preload() {
   data = loadJSON('data/eruption_data.json');
