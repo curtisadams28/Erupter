@@ -11,9 +11,26 @@ function mouseDown(e) {
 }
 function mouseMove(e) {
   console.log(varmouse);
-  document.getElementById('slidertab').style.left = e.x;
+  var sliderpos = e.x;
+  sliderRules();
+  document.getElementById('slidertab').style.left = sliderpos;
   document.getElementById('counter').innerHTML = e.x;
   if (varmouse == false) {
     document.removeEventListener('mousemove', mouseMove);
   }
+
+
+  function sliderRules() {
+    if (sliderpos < 0) {
+      sliderpos = 0;
+    }
+
+    if (sliderpos > window.innerWidth - 8) {
+      sliderpos = window.innerWidth - 8;
+    }
+  }
+
+
+
+
 }
