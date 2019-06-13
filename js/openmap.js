@@ -21,7 +21,7 @@ function setup(){
   myMap = mappa.tileMap(options);
   myMap.overlay(canvas);
 
-  fill(200, 100, 100);
+  fill('red');
   myMap.onChange(drawPoint);
 
   let children = xml.getChildren('place');

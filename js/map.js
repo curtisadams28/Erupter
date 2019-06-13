@@ -1,6 +1,6 @@
 let data;
-let yearquery1 = 1999;
-let yearquery2 = 1999;
+let yearquery1 = 1880;
+let yearquery2 = 1890;
 let query = [];
 const key = 'pk.eyJ1IjoiY3VydHV4ZGVsdXhlIiwiYSI6ImNqd2s0MmZpZTBjajQ0OG9lZjQ1cWswbzIifQ.qqwt65rirh2anE7ykAn2hw'
 
@@ -16,7 +16,7 @@ const options = {
   zoom: 2,
   studio: true, // false to use non studio styles
   //style: 'mapbox.dark' //streets, outdoors, light, dark, satellite (for nonstudio)
-  style: 'mapbox://styles/mapbox/traffic-night-v2',
+  style: 'mapbox://styles/mapbox/light-v9',
   compact: true,
 }
 
@@ -27,18 +27,34 @@ function preload() {
 function setup() {
   jsonToArray();
 
-  canvas = createCanvas(windowWidth,windowHeight);
+  canvas = createCanvas(windowWidth,windowHeight - 30);
   myMap = mappa.tileMap(options);
   myMap.overlay(canvas);
 
-  fill(200, 100, 100);
-
-
+  fill('#E6B199');
+  stroke('#505050');
   myMap.onChange(drawPoint);
+
+
+
 
 }
 
 function draw() {
+  /*
+  if (mouseY <= windowHeight - 40) {
+    cursor('grab');
+  }
+  else {
+    cursor('pointer')
+  }*/
+
+}
+
+
+
+function windowResized() {
+  resizeCanvas(200, 200);
 
 }
 
@@ -48,7 +64,6 @@ function drawPoint(){
     var volcano = myMap.latLngToPixel(query[i].Latitude, query[i].Longitude);
     var normvei = norm(query[i].VEI, 0, 8);
     var circlesize = normvei * 50;
-    console.log(normvei);
     ellipse(volcano.x, volcano.y, circlesize, circlesize);
   }
 
@@ -61,5 +76,16 @@ function jsonToArray() {
       query.push(data.eruptions[i]);
     }
   }
-  console.log(query);
 }
+
+/*
+window.addEventListener('mousemove', function (e) {
+  console.log(e.x + ' ' + e.y);
+});
+*/
+/*
+function sliderTab(e) {
+  console.log('mouse working');
+  console.log(e.x + ' ' + e.y);
+}
+*/
