@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Archive-Regular";
+    src: url("/fonts/Archive-Regular.ttf");
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -21,7 +26,7 @@ canvas {
   bottom: 0px;
   height: 30px;
   width: 100vw;
-  background-color: grey;
+  background-color: #505050;
 }
 
 .slidertabs {
@@ -32,7 +37,7 @@ canvas {
 }
 
 #slidertab1 {
-  left: 50px;
+  left: 0px;
 }
 
 #slidertab2 {
@@ -44,5 +49,48 @@ canvas {
   left: 20px;
   top: 20px;
   z-index: 5;
+}
 
+.yearcount {
+  position: fixed;
+  bottom: 50px;
+  z-index: 5;
+
+  font-family: 'Archive-Regular';
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#year1 {
+  left: 0px;
+}
+
+#year2 {
+  left: 188px;
+}
+
+#sliderbar {
+  height: 30px;
+  width: 200px;
+  background-image: url('/img/sliderbar.svg');
+  /*
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  */
+
+  background-color: #698282;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250' viewBox='0 0 20 20'%3E%3Cg %3E%3Cpolygon fill='%2381a2a1' points='20 10 10 0 0 0 20 20'/%3E%3Cpolygon fill='%2381a2a1' points='0 10 0 20 10 20'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: 10px;
+
+  position: absolute;
+  bottom: 0px;
+  left: 4px;
+  z-index: 1;
 }

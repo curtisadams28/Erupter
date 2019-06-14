@@ -1,6 +1,6 @@
 let data;
-let yearquery1;
-let yearquery2;
+let yearquery1 = 1800;
+let yearquery2 = 1950;
 let query = [];
 const key = 'pk.eyJ1IjoiY3VydHV4ZGVsdXhlIiwiYSI6ImNqd2s0MmZpZTBjajQ0OG9lZjQ1cWswbzIifQ.qqwt65rirh2anE7ykAn2hw'
 
@@ -38,6 +38,8 @@ function setup() {
 
 
 
+
+
 }
 
 function draw() {
@@ -69,12 +71,14 @@ function drawPoint(){
 
 function jsonToArray() {
   query = [];
+
   for (var i = 0; i < data.eruptions.length; i++) {
     if (data.eruptions[i].Year >= yearquery1 && data.eruptions[i].Year <= yearquery2) {
       //console.log(data.eruptions[i]);
       query.push(data.eruptions[i]);
     }
   }
+
 }
 
 /*
