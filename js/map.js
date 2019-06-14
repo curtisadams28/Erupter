@@ -1,6 +1,6 @@
 let data;
-let yearquery1 = 1880;
-let yearquery2 = 1890;
+let yearquery1;
+let yearquery2;
 let query = [];
 const key = 'pk.eyJ1IjoiY3VydHV4ZGVsdXhlIiwiYSI6ImNqd2s0MmZpZTBjajQ0OG9lZjQ1cWswbzIifQ.qqwt65rirh2anE7ykAn2hw'
 
@@ -25,7 +25,7 @@ function preload() {
   data = loadJSON('data/eruption_data.json');
 }
 function setup() {
-  jsonToArray();
+
 
   canvas = createCanvas(windowWidth,windowHeight - 30);
   myMap = mappa.tileMap(options);
@@ -41,13 +41,9 @@ function setup() {
 }
 
 function draw() {
-  /*
-  if (mouseY <= windowHeight - 40) {
-    cursor('grab');
-  }
-  else {
-    cursor('pointer')
-  }*/
+  clear();
+
+  noLoop();
 
 }
 
@@ -60,6 +56,8 @@ function windowResized() {
 
 function drawPoint(){
   clear();
+  jsonToArray();
+  //console.log(query);
   for (var i = 0; i < query.length; i++) {
     var volcano = myMap.latLngToPixel(query[i].Latitude, query[i].Longitude);
     var normvei = norm(query[i].VEI, 0, 8);
@@ -70,6 +68,7 @@ function drawPoint(){
 }
 
 function jsonToArray() {
+  query = [];
   for (var i = 0; i < data.eruptions.length; i++) {
     if (data.eruptions[i].Year >= yearquery1 && data.eruptions[i].Year <= yearquery2) {
       //console.log(data.eruptions[i]);

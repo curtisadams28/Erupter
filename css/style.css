@@ -28,7 +28,15 @@ canvas {
   position: absolute;
   bottom: 0px;
   z-index: 1;
+
+}
+
+#slidertab1 {
   left: 50px;
+}
+
+#slidertab2 {
+  left: 200px;
 }
 
 #counter {
