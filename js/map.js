@@ -1,6 +1,6 @@
 let data;
 let yearquery1 = 1800;
-let yearquery2 = 1950;
+let yearquery2 = 1820;
 let query = [];
 const key = 'pk.eyJ1IjoiY3VydHV4ZGVsdXhlIiwiYSI6ImNqd2s0MmZpZTBjajQ0OG9lZjQ1cWswbzIifQ.qqwt65rirh2anE7ykAn2hw'
 
@@ -26,7 +26,7 @@ function preload() {
 }
 function setup() {
 
-
+  // Creates the canvas and overlays it on the map
   canvas = createCanvas(windowWidth,windowHeight - 30);
   myMap = mappa.tileMap(options);
   myMap.overlay(canvas);
@@ -35,27 +35,51 @@ function setup() {
   stroke('#505050');
   myMap.onChange(drawPoint);
 
-
-
-
-
+  cursor(ARROW);
 
 }
 
 function draw() {
-  clear();
-
-  noLoop();
 
 }
 
+// Checks to see if the mouse is clicked on the recorded position of a volcano.
+function mouseClicked() {
+  var clickedvol = [];
+  var max = {Year: 0};
+  for (var i = 0; i < query.length; i++) {
+    var volcano = myMap.latLngToPixel(query[i].Latitude, query[i].Longitude);
+    var normvei = norm(query[i].VEI, 0, 8);
+    var circlesize = normvei * 50;
+    var distance = dist(mouseX, mouseY, volcano.x, volcano.y);
+    if (distance <= circlesize) {
+      //console.log(query[i]);
+      clickedvol.push(query[i]);
+    }
+  }
 
+  /*
+  If there are more than 1 volcano that is clicked on, this will retrieve the
+  last volcano with the highest year. That is the volcano that will always be
+  on the top.
+  */
 
-function windowResized() {
-  resizeCanvas(200, 200);
+  for (var i = 0; i < clickedvol.length; i++) {
+    if (clickedvol[i].Year >= max.Year) {
+      max = clickedvol[i];
+    }
+  }
+  if (max.Year == 0) {
+    max = null;
+  }
+  else {
+    currentView(max);
+  }
+
 
 }
 
+// Draws the circles onto the canvas using data from the jsonToArray() method.
 function drawPoint(){
   clear();
   jsonToArray();
@@ -69,6 +93,7 @@ function drawPoint(){
 
 }
 
+// Takes the data from the JSON file and pushes it to query[] based on the year.
 function jsonToArray() {
   query = [];
 
@@ -78,17 +103,9 @@ function jsonToArray() {
       query.push(data.eruptions[i]);
     }
   }
-
 }
 
-/*
-window.addEventListener('mousemove', function (e) {
-  console.log(e.x + ' ' + e.y);
-});
-*/
-/*
-function sliderTab(e) {
-  console.log('mouse working');
-  console.log(e.x + ' ' + e.y);
+// Function to set top info section to the values of the selected volcano.
+function currentView(currentvol) {
+  console.log(currentvol);
 }
-*/

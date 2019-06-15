@@ -38,20 +38,21 @@ function mouseMove(e) {
   var norminverse = 1 - posnorm;
   var yeardec = 2015 - (norminverse * 6375);
   var year = Math.floor(yeardec);
-  */
+
   if (sliderpos == 0) {
     sliderpos = 1;
   }
-  var posnorm = norm(Math.log(sliderpos), 0, Math.log(window.innerWidth - 8));
+  */
+
+  var posnorm = norm(sliderpos, 0, window.innerWidth - 8);
 
   //var norminverse = 1 - posnorm;
 
   var yeardec = 1800 + (posnorm * 215);
   var year = Math.floor(yeardec);
-  document.getElementById('counter').innerHTML = year;
 
-  // inbetween sliders
 
+  // Sets the yearquery, moves the slider tab and sets the number above the tab.
   if (sliderid == 'slidertab1') {
     slidertab1 = sliderpos;
     yearquery1 = year;
@@ -76,7 +77,6 @@ function mouseMove(e) {
 
   }
   var barwidth = slidertab2 - slidertab1;
-  console.log(typeof barwidth);
   document.getElementById('sliderbar').style.width = barwidth + 'px';
   document.getElementById('sliderbar').style.left = slidertab1 + 4 + 'px';
 

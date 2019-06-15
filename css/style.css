@@ -41,7 +41,7 @@ canvas {
 }
 
 #slidertab2 {
-  left: 200px;
+  left: 124px;
 }
 
 #counter {
@@ -69,12 +69,12 @@ canvas {
 }
 
 #year2 {
-  left: 188px;
+  left: 112px;
 }
 
 #sliderbar {
   height: 30px;
-  width: 200px;
+  width: 124px;
   background-image: url('/img/sliderbar.svg');
   /*
   background-position: center;
