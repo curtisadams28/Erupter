@@ -25,8 +25,9 @@
   <p>
   <strong>Links</strong>
   
-  <strong>Adobe XD Mockups</strong>
-  https://gofile.io/?c=bV5Nz4
+  <strong>Adobe XD</strong>
+  <br>
+  Art Board: https://gofile.io/?c=bV5Nz4
   </p>
 * [ Appropriate visualisation techniques are evaluated, selected and used](#3)
   <p>
