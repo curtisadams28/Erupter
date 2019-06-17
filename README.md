@@ -17,13 +17,37 @@
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
-* [Data visualisation question clearly warrants use of visualisation methods](#about-the-project)
-* [ Description of the source and types of data used](#getting-started)
-* [ Appropriate visualisation techniques are evaluated, selected and used](#usage)
-* [Proof of evaluation of interactive techniques is given](#contributing)
-* [Value that visualisation provides for given context is demonstrated](#license)
-* [Clear evidence of research that informs visualisation project is given](#contact)
-* [Project designs and operational project with instructions for use submitted](#acknowledgements)
+* [Data visualisation question clearly warrants use of visualisation methods](#1a)
+  <p>
+  <strong>Methods</strong>
+  </p>
+* [ Description of the source and types of data used](#2)
+  <p>
+  <strong>Links</strong>
+  
+  <strong>Adobe XD Mockups</strong>
+  https://gofile.io/?c=bV5Nz4
+  </p>
+* [ Appropriate visualisation techniques are evaluated, selected and used](#3)
+  <p>
+  <strong>Methods</strong>
+  </p>
+* [Proof of evaluation of interactive techniques is given](#4)
+  <p>
+  <strong>Methods</strong>
+  </p>
+* [Value that visualisation provides for given context is demonstrated](#5)
+  <p>
+  <strong>Methods</strong>
+  </p>
+* [Clear evidence of research that informs visualisation project is given](#6)
+  <p>
+  <strong>Methods</strong>
+  </p>
+* [Project designs and operational project with instructions for use submitted](#7)
+  <p>
+  <strong>Methods</strong>
+  </p>
 
 
 
