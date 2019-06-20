@@ -3,7 +3,7 @@
   <head>
     <script src="js/p5/p5.min.js"></script>
     <script src="js/p5/mappa.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="js/map.js"></script>
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -11,6 +11,50 @@
 
   </head>
   <body>
+    <div id="topnav">
+      <h1>ERUPTOR</h1>
+    </div>
+    <div id="infobar">
+      <div class="grid-containers">
+        <div class="title">
+          <h2 id="volcano">Ruapehu</h2>
+        </div>
+        <div class="box">
+          <p class="title-text">Country:</p>
+          <p class="lower-text" id="country">New Zealand</p>
+        </div>
+        <div id="VEI" class="box">
+          <p class="title-text">VEI:</p>
+          <p class="lower-text"  id="vei">8</p>
+        </div>
+        <div class="box">
+          <p class="title-text">Type:</p>
+          <p class="lower-text"  id="type">Stratovolcano</p>
+        </div>
+        <div class="box">
+          <p class="title-text">Latitude:</p>
+          <p class="lower-text"  id="lat">-49.5</p>
+        </div>
+        <div class="box">
+          <p class="title-text">Longitude:</p>
+          <p class="lower-text"  id="long">-155.26</p>
+        </div>
+        <div id="yearbox" class="box">
+        <p class="title-text">Year:</p>
+        <p class="lower-text" id="year">1997</p>
+        </div>
+        <div onclick="closeInfo()" class="close">
+          <img id="closeimg" src="img/close.svg">
+        </div>
+      </div>
+    </div>
+    <div id="flip" class="arrow">
+      <img src="img/circlearrow.svg" alt="">
+    </div>
+    <div id="panel">
+      <p id="descp">
+      </p>
+    </div>
     <div id="sliderbar"></div>
     <p class="yearcount" id="year1">1800</p>
     <p class="yearcount" id="year2">1820</p>

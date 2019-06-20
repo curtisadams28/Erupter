@@ -1,3 +1,10 @@
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideDown("slow");
+  });
+});
+
+
 let data;
 let yearquery1 = 1800;
 let yearquery2 = 1820;
@@ -7,8 +14,6 @@ const key = 'pk.eyJ1IjoiY3VydHV4ZGVsdXhlIiwiYSI6ImNqd2s0MmZpZTBjajQ0OG9lZjQ1cWsw
 let myMap;
 let canvas;
 const mappa = new Mappa('MapboxGL', key);
-
-
 
 const options = {
   lat: 0,
@@ -108,4 +113,21 @@ function jsonToArray() {
 // Function to set top info section to the values of the selected volcano.
 function currentView(currentvol) {
   console.log(currentvol);
+  document.getElementById('volcano').innerHTML = currentvol.Name;
+  document.getElementById('country').innerHTML = currentvol.Country;
+  document.getElementById('vei').innerHTML = currentvol.VEI;
+  document.getElementById('type').innerHTML = currentvol.Type;
+  document.getElementById('lat').innerHTML = currentvol.Latitude;
+  document.getElementById('long').innerHTML = currentvol.Longitude;
+  document.getElementById('year').innerHTML = currentvol.Year;
+  document.getElementById('descp').innerHTML = currentvol.Desc;
+
+  document.getElementById('infobar').style.display = 'initial';
+  document.getElementById('flip').style.display = 'initial';
+}
+
+function closeInfo() {
+  document.getElementById('infobar').style.display = 'none';
+  document.getElementById('flip').style.display = 'none';
+  document.getElementById('panel').style.display = 'none';
 }

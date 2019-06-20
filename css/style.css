@@ -3,6 +3,8 @@
     src: url("/fonts/Archive-Regular.ttf");
 }
 
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
 html, body {
   margin: 0;
   padding: 0;
@@ -93,4 +95,140 @@ canvas {
   bottom: 0px;
   left: 4px;
   z-index: 1;
+}
+
+#topnav {
+  position: absolute;
+  height: 55px;
+  width: 100vw;
+  top: 0px;
+  background-color: #505050;
+  z-index: 2;
+}
+
+h1 {
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
+  margin-top: 8px;
+  font-family: 'Archive-Regular';
+  color: white;
+  letter-spacing: 2px;
+}
+
+#infobar {
+  position: absolute;
+  height: 55px;
+  width: 100vw;
+  top: 55px;
+  background-color: white;
+  z-index: 2;
+  -webkit-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.35);
+  -moz-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.35);
+  box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.35);
+  display: none;
+
+}
+
+.grid-containers {
+  display: flex;
+  background-color: white;
+  height: 100%;
+}
+
+.box {
+  width: 15%;
+}
+
+#VEI {
+  width: 5%;
+}
+
+.box p {
+  font-family: 'Lato', sans-serif;
+}
+
+.title {
+  background-color: #EAE7DC;
+  width: 18%;
+}
+
+.title-text {
+  color: #ABABAB;
+  margin-top: 5px;
+  font-size: 1em;
+  padding: 0;
+  margin-bottom: 0;
+  margin-left: 10%;
+}
+
+.lower-text {
+  color: #505050;
+  margin-top: 2px;
+  padding: 0;
+  margin-left: 10%;
+  font-size: 1.1em;
+}
+
+#yearbox {
+  width: 5%;
+}
+
+h2 {
+  padding: 0px;
+  margin: 0px;
+  margin-top: 14px;
+  margin-left: 5%;
+  font-family: 'Archive-Regular';
+  color: #505050;
+  letter-spacing: 2px;
+}
+
+.close {
+  height: 55px;
+  margin-left: 10%;
+}
+
+.close:hover {
+  cursor: pointer;
+}
+
+#closeimg {
+  fill: #878787;
+  height: 16px;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+.arrow {
+  position: absolute;
+  top: 110px;
+  left: 47.6%;
+  margin: auto;
+  z-index: 3;
+  display: none;
+}
+
+.arrow:hover {
+  cursor: pointer;
+}
+
+#panel {
+  position: absolute;
+  top: 110px;
+  z-index: 3;
+  background-color: white;
+  -webkit-box-shadow: 0px 5px 6px 0px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0px 5px 6px 0px rgba(0,0,0,0.25);
+  box-shadow: 0px 5px 6px 0px rgba(0,0,0,0.25);
+  display: none;
+
+
+}
+
+#panel p {
+  font-family: 'Lato', sans-serif;
+  padding: 3% 10%;
+  color: #878787;
+  line-height: 1.8em;
 }
